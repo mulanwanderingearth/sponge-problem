@@ -1,6 +1,24 @@
 def sponge_case(sentence):
     # Write your solution here!
-    pass
+    #split the sentence into a list of words
+    #loop through each word in the list
+    #loop through each char in the word.
+    # if index of the char is even, lowercase this char,else upper case the char
+    #join the words and return the string
+    word_list = sentence.split() 
+    result = []
+    for word in word_list:
+        new_char = ""
+        for index, char in enumerate(word):
+            if index % 2 == 0:
+                new_char += char.lower()
+            else:
+                new_char += char.upper()
+        result.append(new_char)
+
+    return " ".join(result)
+        
+
 
 
 
